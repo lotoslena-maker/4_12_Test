@@ -38,7 +38,7 @@ Google Sheets не приймає анонімні POST-запити напря�
 
 - `site/` — готовий тест і QR-сторінка.
 - `backend/Code.gs` — Apps Script, який перевіряє відповіді та додає рядок у Google Sheets.
-- `.github/workflows/pages.yml` — автоматичне розгортання GitHub Pages.
+- `.github/workflows/pages.yml` — ручний workflow для GitHub Pages, якщо згодом увімкнути Pages у налаштуваннях репозиторію.
 
 ### Правильні відповіді
 
