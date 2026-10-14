@@ -1,5 +1,5 @@
 const CONFIG = {
-  RESULTS_ENDPOINT: "PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE"
+  RESULTS_ENDPOINT: "https://script.google.com/macros/s/AKfycbwRzz4Qg5Br1FWY8BbPtSnger8t3i1JOyKbRH6pQVTSAptOYiIgWT1PznUJyvhFY-hp/exec"
 };
 
 const questions = [
@@ -173,7 +173,7 @@ async function sendResult(score,percent){
       headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},
       body:body.toString()
     });
-    status.textContent="✓ Результат відправлено до таблиці викладача.";
+    status.textContent="✓ Результат надіслано. Збереження можна перевірити в таблиці викладача.";
   }catch(err){
     localStorage.setItem("4_12_last_result",JSON.stringify({...payload,savedAt:new Date().toISOString()}));
     status.textContent="Не вдалося синхронізувати результат. Він тимчасово збережений на цьому пристрої.";
