@@ -32,7 +32,7 @@ Google Sheets не приймає анонімні POST-запити напря�
    `PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE`
    на отриманий URL.
 
-Після commit у `main` GitHub Actions автоматично оновить GitHub Pages.
+Після commit у `main` GitHub Actions автоматично оновить GitHub Pages. Workflow також може увімкнути Pages під час першого розгортання.
 
 ## Структура
 
