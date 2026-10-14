@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QR — тест 4.11</title>
+<link rel="stylesheet" href="styles.css">
+<style>.qrwrap{text-align:center}.qrbox{display:inline-block;background:white;padding:22px;border-radius:24px;margin:18px auto}.url{word-break:break-all;color:#a9bfd3}</style>
+</head>
+<body>
+<main class="shell">
+  <section class="card qrwrap">
+    <div class="badge">QR-КОД ДЛЯ СЛУХАЧІВ</div>
+    <h1>Тест 4.11</h1>
+    <p class="muted">Відскануйте камерою смартфона та відкрийте посилання.</p>
+    <div id="qrcode" class="qrbox"></div>
+    <p class="url">https://lotoslena-maker.github.io/4_12_Test/</p>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>new QRCode(document.getElementById("qrcode"),{text:"https://lotoslena-maker.github.io/4_12_Test/",width:320,height:320,correctLevel:QRCode.CorrectLevel.H});</script>
+</body></html>
