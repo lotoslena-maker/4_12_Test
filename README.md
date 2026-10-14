@@ -4,8 +4,8 @@
 
 ## Посилання
 
-- Тест: https://raw.githack.com/lotoslena-maker/4_12_Test/main/site/index.html
-- QR-екран для демонстрації: https://raw.githack.com/lotoslena-maker/4_12_Test/main/site/qr.html
+- Тест: https://cdn.jsdelivr.net/gh/lotoslena-maker/4_12_Test@main/site/index.html
+- QR-екран для демонстрації: https://cdn.jsdelivr.net/gh/lotoslena-maker/4_12_Test@main/site/qr.html
 - Google Sheets з результатами: https://docs.google.com/spreadsheets/d/1ngD5jb8SrKWvLetR5DyjPAcIe9dg9r_HpFsowHNvkY8/edit
 
 ## Що збирається перед тестом
@@ -32,7 +32,7 @@ Google Sheets не приймає анонімні POST-запити напря�
    `PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE`
    на отриманий URL.
 
-Після commit у `main` GitHub Actions автоматично оновить GitHub Pages. Workflow також може увімкнути Pages під час першого розгортання.
+Після commit зміни доступні через jsDelivr-посилання вище. CDN іноді кешує файл кілька хвилин.
 
 ## Структура
 
@@ -50,4 +50,3 @@ Google Sheets не приймає анонімні POST-запити напря�
 6. MLOps — моніторинг якості, затримки, дрейфу даних і стабільності після розгортання.
 
 
-> Примітка: тест уже можна відкривати через RawGitHack без увімкнення GitHub Pages. GitHub Pages workflow залишено для подальшого використання після ручного ввімкнення Pages у налаштуваннях репозиторію.
