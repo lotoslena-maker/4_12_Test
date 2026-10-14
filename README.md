@@ -4,8 +4,8 @@
 
 ## Посилання
 
-- Тест: https://lotoslena-maker.github.io/4_12_Test/
-- QR-екран для демонстрації: https://lotoslena-maker.github.io/4_12_Test/qr.html
+- Тест: https://raw.githack.com/lotoslena-maker/4_12_Test/main/site/index.html
+- QR-екран для демонстрації: https://raw.githack.com/lotoslena-maker/4_12_Test/main/site/qr.html
 - Google Sheets з результатами: https://docs.google.com/spreadsheets/d/1ngD5jb8SrKWvLetR5DyjPAcIe9dg9r_HpFsowHNvkY8/edit
 
 ## Що збирається перед тестом
@@ -48,3 +48,6 @@ Google Sheets не приймає анонімні POST-запити напря�
 4. Reward — числовий сигнал якості дії агента.
 5. AutoML — автоматизація пошуку, вибору і налаштування моделей.
 6. MLOps — моніторинг якості, затримки, дрейфу даних і стабільності після розгортання.
+
+
+> Примітка: тест уже можна відкривати через RawGitHack без увімкнення GitHub Pages. GitHub Pages workflow залишено для подальшого використання після ручного ввімкнення Pages у налаштуваннях репозиторію.
