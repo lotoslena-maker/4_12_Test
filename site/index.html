@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07172b">
+  <title>Тест 4.11 — перспективні напрями аналізу даних</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">ТЕМА 4 · ЗАНЯТТЯ 11</div>
+      <h1>Легке тестування</h1>
+      <p>Перспективні напрями використання методів аналізу даних</p>
+    </header>
+
+    <section id="startScreen" class="card">
+      <div class="badge">6 питань · 3 варіанти · ≈ 3 хв</div>
+      <h2>Перед початком</h2>
+      <p class="muted">Заповніть три поля. Усі вони обов’язкові.</p>
+      <form id="identityForm" class="form-grid">
+        <label>Номер групи
+          <input id="group" name="group" required maxlength="40" autocomplete="off" placeholder="Напр. 12">
+        </label>
+        <label>В/звання
+          <input id="rank" name="rank" required maxlength="80" autocomplete="off" placeholder="Напр. майор">
+        </label>
+        <label class="wide">Ім’я та прізвище
+          <input id="name" name="name" required maxlength="120" autocomplete="name" placeholder="Напр. Олена Лифар">
+        </label>
+        <button class="primary wide" type="submit">Почати тест</button>
+      </form>
+    </section>
+
+    <section id="quizScreen" class="card hidden" aria-live="polite">
+      <div class="topline">
+        <span id="questionCounter">Питання 1 з 6</span>
+        <span id="participant"></span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <h2 id="questionText"></h2>
+      <div id="answers" class="answers"></div>
+      <div class="nav">
+        <button id="prevBtn" class="secondary" type="button">← Назад</button>
+        <button id="nextBtn" class="primary" type="button">Далі →</button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="card hidden">
+      <div id="scoreRing" class="score-ring"><strong id="scoreText">0/6</strong><span id="percentText">0%</span></div>
+      <h2 id="resultTitle">Результат</h2>
+      <p id="resultMessage" class="muted"></p>
+      <div id="syncStatus" class="sync"></div>
+      <details>
+        <summary>Переглянути правильні відповіді</summary>
+        <div id="review" class="review"></div>
+      </details>
+      <button id="retryBtn" class="secondary" type="button">Пройти ще раз</button>
+    </section>
+
+    <footer>Технології · Аналітика · Рішення · Майбутнє</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
