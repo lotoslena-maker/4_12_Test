@@ -1,52 +1,33 @@
-# 4_12_Test
+# Тест 4.11: Перспективні напрями використання методів аналізу даних
 
-Мобільний тест до заняття **4.11 «Перспективні напрями використання методів аналізу даних»**.
+Мобільний навчальний тест: 6 питань × 3 варіанти відповіді. Перед початком слухач вказує номер групи, військове звання, ім’я та прізвище.
 
-## Посилання
+## Посилання на GitHub Pages
 
-- Тест: https://cdn.jsdelivr.net/gh/lotoslena-maker/4_12_Test@main/site/index.html
-- QR-екран для демонстрації: https://cdn.jsdelivr.net/gh/lotoslena-maker/4_12_Test@main/site/qr.html
-- Google Sheets з результатами: https://docs.google.com/spreadsheets/d/1ngD5jb8SrKWvLetR5DyjPAcIe9dg9r_HpFsowHNvkY8/edit
+- **Тест:** https://lotoslena-maker.github.io/4_12_Test/
+- **QR-код для демонстрації:** https://lotoslena-maker.github.io/4_12_Test/qr.html
+- **Google Sheets (тільки для викладача):** https://docs.google.com/spreadsheets/d/1ngD5jb8SrKWvLetR5DyjPAcIe9dg9r_HpFsowHNvkY8/edit
 
-## Що збирається перед тестом
+**Потрібна одноразова активація GitHub Pages власником репозиторію:**
 
-1. Номер групи
-2. В/звання
-3. Ім’я та прізвище
+1. Відкрити https://github.com/lotoslena-maker/4_12_Test/settings/pages
+2. У **Build and deployment** вибрати **Source: Deploy from a branch**.
+3. Вибрати **Branch: main**, **Folder: /docs**, натиснути **Save**.
+4. Зачекати публікацію сайту, потім відкрити адресу тесту вище.
 
-Далі слухач відповідає на 6 легких запитань, кожне має 3 варіанти відповіді.
+УВАГА: Не використовуйте посилання виду `https://cdn.jsdelivr.net/gh/.../index.html` як сайт: браузер може показувати вихідний HTML-код замість сторінки.
 
-## Одноразове підключення автоматичного запису в Google Sheets
+## Файли
 
-Google Sheets не приймає анонімні POST-запити напряму, тому потрібен маленький Google Apps Script.
+- `docs/index.html` — головна вебсторінка (GitHub Pages).
+- `docs/styles.css` — оформлення.
+- `docs/app.js` — запитання, навігація й надсилання результатів до Google Apps Script.
+- `docs/qr.html` — QR-код із правильною адресою GitHub Pages.
+- `backend/Code.gs` — серверна частина Google Apps Script.
+- `site/` — початкова версія, не використовується як корінь GitHub Pages.
 
-1. Відкрийте створену таблицю результатів.
-2. **Розширення → Apps Script**.
-3. Видаліть стандартний код і вставте код із `backend/Code.gs`.
-4. **Deploy → New deployment → Web app**.
-5. Execute as: **Me**.
-6. Who has access: **Anyone**.
-7. Натисніть **Deploy** і скопіюйте URL виду:
-   `https://script.google.com/macros/s/.../exec`
-8. У файлі `site/app.js` замініть:
-   `PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE`
-   на отриманий URL.
+## Google Sheets
 
-Після commit зміни доступні через jsDelivr-посилання вище. CDN іноді кешує файл кілька хвилин.
+Google Apps Script вже має налаштований `doGet` і `doPost`. `docs/app.js` містить видану адресу публікації `/exec`. Під час проходження тесту відповіді відправляються до `doPost`, який рахує бал і додає рядок у таблицю **«Результати»**.
 
-## Структура
-
-- `site/` — готовий тест і QR-сторінка.
-- `backend/Code.gs` — Apps Script, який перевіряє відповіді та додає рядок у Google Sheets.
-- `.github/workflows/pages.yml` — ручний workflow для GitHub Pages, якщо згодом увімкнути Pages у налаштуваннях репозиторію.
-
-### Правильні відповіді
-
-1. Transfer Learning — адаптація попередньо навченої моделі.
-2. RNN/LSTM/GRU — послідовні дані та часові ряди.
-3. Attention — оцінювання важливості частин вхідних даних.
-4. Reward — числовий сигнал якості дії агента.
-5. AutoML — автоматизація пошуку, вибору і налаштування моделей.
-6. MLOps — моніторинг якості, затримки, дрейфу даних і стабільності після розгортання.
-
-
+Щоб перевірити запис, введіть у тесті фіктивні дані `TEST` / `ТЕСТ` / `ТЕСТ ПІДКЛЮЧЕННЯ`, пройдіть 6 питань та перевірте появу рядка у таблиці. Відправлення через `no-cors` не дає браузеру підтвердження від сервера, тому показаний повідомленням факт відправлення сам по собі не доводить успішного запису.
